@@ -1,0 +1,21 @@
+<div>
+ <% if current_user %>
+ 	<%= current_user.email %>
+ 	<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+ <% else %>
+ 	<%= link_to 'Login', new_user_session_path %>
+ <% end %>
+</div>
+
+<div>
+<%= link_to 'Home', root_path %>
+</div>
+
+
+<H1 style="text-align: center;;">
+	Welcome to AshwinBlog
+</H1>
+
+<%= link_to 'Login with Facebook', '/auth/facebook' %>
+
+

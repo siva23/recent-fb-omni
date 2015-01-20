@@ -1,0 +1,2231 @@
+  [1m[36m (157.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (300.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20150120083533)
+  [1m[35m (100.7ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `unconfirmed_email` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (180.3ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`) [0m
+  [1m[35m (180.0ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`) 
+  [1m[36m (191.9ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_confirmation_token` ON `users` (`confirmation_token`) [0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150120083533')[0m
+  [1m[35m (47.8ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:08:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 81ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:09:44 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 635ms (Views: 634.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:09:45 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:09:45 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:09:45 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:09:45 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:09:45 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:09:45 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:09:45 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:14:55 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:14:56 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:14:56 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:14:56 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:14:56 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:14:56 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:14:56 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:14:56 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:14:59 +0530
+Processing by HomeController#welcome as HTML
+  Rendered home/welcome.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+Processing by HomeController#welcome as HTML
+  Rendered home/welcome.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:15:55 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:15:58 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:15:59 +0530
+Processing by HomeController#welcome as HTML
+  Rendered home/welcome.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:16:11 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:17:19 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 14ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:17:19 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (3.8ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 153ms (Views: 62.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-20 14:17:41 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tSXGVPkXH+sZKgi7APVx1FGDT/3VAYZH3JpcBk3nti0=", "user"=>{"email"=>"ashwin@hatchforce.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (15.6ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'ashwin@hatchforce.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `users` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2015-01-20 08:47:49', 'ashwin@hatchforce.com', '$2a$10$SGM3gn1fa6/wDE97N2T7lu8Yfu38cePmFFuZkH.0GSEoRigYfskj2', '2015-01-20 08:47:49')
+  [1m[36m (44.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2015-01-20 08:47:49', `current_sign_in_at` = '2015-01-20 08:47:49', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2015-01-20 08:47:49' WHERE `users`.`id` = 1[0m
+  [1m[35m (39.2ms)[0m  COMMIT
+Redirected to http://lvh.me:5000/welcome
+Completed 302 Found in 333ms (ActiveRecord: 101.1ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/welcome.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:17:49 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+Processing by HomeController#welcome as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/welcome.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:18 +0530
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2015-01-20 14:21:22 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.5ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2015-01-20 14:21:22 +0530
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (45.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (80.5ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/welcome.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:21:43 +0530
+
+
+Started POST "/users/sign_out" for 127.0.0.1 at 2015-01-20 14:21:44 +0530
+
+ActionController::RoutingError (No route matches [POST] "/users/sign_out"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.9ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+Processing by HomeController#welcome as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/welcome.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:18 +0530
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tSXGVPkXH+sZKgi7APVx1FGDT/3VAYZH3JpcBk3nti0="}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://lvh.me:5000/
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:19 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:22:42 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:23:14 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:23:18 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 45ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:23:18 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 63ms (Views: 11.9ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:24:11 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7lfZc5+hZk4Unbx7dE5JMymVOJqPADOnpyEF5i09aaM=", "user"=>{"email"=>"ashwin@hatchforce.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ashwin@hatchforce.com' ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2015-01-20 08:54:12', `sign_in_count` = 2, `updated_at` = '2015-01-20 08:54:12' WHERE `users`.`id` = 1
+  [1m[36m (47.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://lvh.me:5000/welcome
+Completed 302 Found in 182ms (ActiveRecord: 49.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+Processing by HomeController#welcome as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/welcome.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:12 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/welcome.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:24:58 +0530
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k+tlJwZp5QutXSTTg5rGf+KD/P7lsPtqQpQ6ub2Ua5I="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://lvh.me:5000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:25:39 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:25:41 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:25:41 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateAuthentications (20150120091106)
+  [1m[35m (86.1ms)[0m  CREATE TABLE `authentications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `provider` varchar(255), `uid` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150120091106')
+  [1m[36m (47.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:44:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 35ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views/devise/sessions/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 148ms (Views: 91.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:18 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:44:21 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:44:29 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:45:45 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:45:45 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:46:30 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:47:16 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:48:02 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:48:02 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:48:02 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:48:02 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:48:03 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:48:03 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:48:03 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:48:03 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:48:08 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:48:08 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:50:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 402ms (Views: 315.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:13 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:14 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:50:24 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:50:24 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:50:25 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:50:26 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:50:30 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:52:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:53:34 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:53:35 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 15ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:53:36 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 79ms (Views: 24.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:54:55 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:55:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:57:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 190ms (Views: 102.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:06 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:57:07 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:57:08 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:22 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:57:23 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:57:23 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:57:35 +0530
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-01-20 14:58:00 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UC1cBTsrOwQAWbgcCL4AapO2ks8IzIy1Iwuyn5izoWo=", "user"=>{"email"=>"ashwin@hatchforce.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ashwin@hatchforce.com' ORDER BY `users`.`id` ASC LIMIT 1
+Completed 401 Unauthorized in 121ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UC1cBTsrOwQAWbgcCL4AapO2ks8IzIy1Iwuyn5izoWo=", "user"=>{"email"=>"ashwin@hatchforce.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 121ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 14:58:01 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 14:58:43 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 15:00:34 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:00:35 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:00:36 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 69ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:02:34 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:02:36 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/authentication.css?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/authentication.js?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:03:28 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:03:30 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 15ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 15:03:30 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 80ms (Views: 24.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:03:32 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:03:32 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQD-jrXqKeZhP64qilzrE16maBBxwDrf2QS2LtTz1RuPcj09TH1uDqF3iW2wa218t9Rn3OehZdxybSbvOG8x53epbhAy8z4oYbLLf24xpTxt2TJIIOKdTSqeD8K_4qrepB9UiklTjacmEjgP7igE-Hk1bdUQqc38ZWHsBZkpNIGcr3eb1sM_UL911rYMPGFsKUGQT4B_4r-l0opWD-vqUuO0a_0zggggqrhTi6bVbj_vvuEqFs9erEtm8IEAwJgsIFf-JimQhwv5Cj9RhtgdsHZwD1pw1e8fDS6SCQvfc01lcTTQgG21YNhovliXjQ_Wld0&state=d460c1dfbce26e182918ea925ff150098d89b3491b0cc523" for 127.0.0.1 at 2015-01-20 15:03:45 +0530
+
+ActionController::RoutingError (uninitialized constant AuthenticationsController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.2.0) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:72:in `block in callback_phase'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:71:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1037392418__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.1ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:06:19 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQAuA3CIgqRZZLXwnkszCuyrqToMslKIHWOsmn6HWHDy-_Z-XuWM55fTrOCLFSXNFrR3CK28LBxed83UzwhMJwrwX2XQBPSGIBv3zag-zizPzOHYdJ5D199o-6X5u8izd8jiWTAkA5fhZ-tkanEiJw8NskbgiAOPrFXTEyit26-7ggfXXp8snQzzF-V0oOP00JbbfIXqTg_rENRcvtElLT2rOkT_PHkCujxw0mlgls2Fy06oOoE8i-cqfgvdXiyWdmbEBLgd4M_zYIgahetKKuez5kQKLk3OQG1lfhSGEm6kzwQutpGFDRTm5FvipM1-Zt0&state=c031b4a78c7524d6ee6903b98f0c43a45c48cc86853ccb03" for 127.0.0.1 at 2015-01-20 15:06:19 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQAuA3CIgqRZZLXwnkszCuyrqToMslKIHWOsmn6HWHDy-_Z-XuWM55fTrOCLFSXNFrR3CK28LBxed83UzwhMJwrwX2XQBPSGIBv3zag-zizPzOHYdJ5D199o-6X5u8izd8jiWTAkA5fhZ-tkanEiJw8NskbgiAOPrFXTEyit26-7ggfXXp8snQzzF-V0oOP00JbbfIXqTg_rENRcvtElLT2rOkT_PHkCujxw0mlgls2Fy06oOoE8i-cqfgvdXiyWdmbEBLgd4M_zYIgahetKKuez5kQKLk3OQG1lfhSGEm6kzwQutpGFDRTm5FvipM1-Zt0", "state"=>"c031b4a78c7524d6ee6903b98f0c43a45c48cc86853ccb03", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError ({"code"=>"AQAuA3CIgqRZZLXwnkszCuyrqToMslKIHWOsmn6HWHDy-_Z-XuWM55fTrOCLFSXNFrR3CK28LBxed83UzwhMJwrwX2XQBPSGIBv3zag-zizPzOHYdJ5D199o-6X5u8izd8jiWTAkA5fhZ-tkanEiJw8NskbgiAOPrFXTEyit26-7ggfXXp8snQzzF-V0oOP00JbbfIXqTg_rENRcvtElLT2rOkT_PHkCujxw0mlgls2Fy06oOoE8i-cqfgvdXiyWdmbEBLgd4M_zYIgahetKKuez5kQKLk3OQG1lfhSGEm6kzwQutpGFDRTm5FvipM1-Zt0", "state"=>"c031b4a78c7524d6ee6903b98f0c43a45c48cc86853ccb03", "controller"=>"authentications", "action"=>"create", "provider"=>"facebook"}):
+  app/controllers/authentications_controller.rb:4:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:07:43 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQDSKvfIkKQgMEZL6H5jeiRWtjrlTrH0aR9ESofzCUNwBUfJt-b0qYqvG4CkT9hy_GnRgMM6xQ2mq6Com95WfX1Rw6Rc0A59jqLErntuGmvXr5wt1G-L147jtvaQ7H5GtOnUgVQ2JCfZ24jH-w4rwNh3NnL3cY3ruXNW67I8RLtx8KkqvMdokLSxEEALOqTU-sDXsey0zt1eGwjdbcpAB5AbeRHR5-KaQs5N9_-BoppdDOj5QlYvX4WhbTsYyAUbhS6nMgIDR3uH60fQuu23H_g36XNhzHuNUHX3VqG5m9Qe0BR9SHFezDBjMwQg5vfpTRA&state=5da977cf71a42238b82e4624b5ff8596dadc5b51ff2290fe" for 127.0.0.1 at 2015-01-20 15:07:44 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQDSKvfIkKQgMEZL6H5jeiRWtjrlTrH0aR9ESofzCUNwBUfJt-b0qYqvG4CkT9hy_GnRgMM6xQ2mq6Com95WfX1Rw6Rc0A59jqLErntuGmvXr5wt1G-L147jtvaQ7H5GtOnUgVQ2JCfZ24jH-w4rwNh3NnL3cY3ruXNW67I8RLtx8KkqvMdokLSxEEALOqTU-sDXsey0zt1eGwjdbcpAB5AbeRHR5-KaQs5N9_-BoppdDOj5QlYvX4WhbTsYyAUbhS6nMgIDR3uH60fQuu23H_g36XNhzHuNUHX3VqG5m9Qe0BR9SHFezDBjMwQg5vfpTRA", "state"=>"5da977cf71a42238b82e4624b5ff8596dadc5b51ff2290fe", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (#<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1426930424 token="CAAT6HWFZB4dsBAJ5ujDT9AxEvO88zWC1ViTTdQ4uis1f3GnZAW8zsaIPHeVEI0MeFYbiiYK2R2ASZAZAKJxakdJNA4rJBnPvZCtebfVk0DwG8vX6DdbfEOJkXBHLXSHjVNifwtZAgh6uaNVXBwZCDb4tcJKdDNsTRDvhZCzclm1WUb0LcEeh5GhmjbtKMHDuv0MZD"> extra=#<OmniAuth::AuthHash raw_info=#<OmniAuth::AuthHash birthday="06/27/1987" email="y_ashu_rao@ymail.com" first_name="Ashwin" gender="male" id="10153007229409663" last_name="Yaprala" link="https://www.facebook.com/app_scoped_user_id/10153007229409663/" locale="en_US" name="Ashwin Yaprala" timezone=5.5 updated_time="2014-12-14T12:04:27+0000" verified=true>> info=#<OmniAuth::AuthHash::InfoHash email="y_ashu_rao@ymail.com" first_name="Ashwin" image="http://graph.facebook.com/10153007229409663/picture" last_name="Yaprala" name="Ashwin Yaprala" urls=#<OmniAuth::AuthHash Facebook="https://www.facebook.com/app_scoped_user_id/10153007229409663/"> verified=true> provider="facebook" uid="10153007229409663">):
+  app/controllers/authentications_controller.rb:4:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.2ms)
+
+
+Started GET "/auth/facebook/callback?code=AQDSKvfIkKQgMEZL6H5jeiRWtjrlTrH0aR9ESofzCUNwBUfJt-b0qYqvG4CkT9hy_GnRgMM6xQ2mq6Com95WfX1Rw6Rc0A59jqLErntuGmvXr5wt1G-L147jtvaQ7H5GtOnUgVQ2JCfZ24jH-w4rwNh3NnL3cY3ruXNW67I8RLtx8KkqvMdokLSxEEALOqTU-sDXsey0zt1eGwjdbcpAB5AbeRHR5-KaQs5N9_-BoppdDOj5QlYvX4WhbTsYyAUbhS6nMgIDR3uH60fQuu23H_g36XNhzHuNUHX3VqG5m9Qe0BR9SHFezDBjMwQg5vfpTRA&state=5da977cf71a42238b82e4624b5ff8596dadc5b51ff2290fe" for 127.0.0.1 at 2015-01-20 15:09:46 +0530
+
+OAuth2::Error (: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100}}):
+  oauth2 (1.0.0) lib/oauth2/client.rb:113:in `request'
+  oauth2 (1.0.0) lib/oauth2/client.rb:138:in `get_token'
+  oauth2 (1.0.0) lib/oauth2/strategy/auth_code.rb:29:in `get_token'
+  omniauth-oauth2 (1.2.0) lib/omniauth/strategies/oauth2.rb:93:in `build_access_token'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:114:in `build_access_token'
+  omniauth-oauth2 (1.2.0) lib/omniauth/strategies/oauth2.rb:75:in `callback_phase'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:72:in `block in callback_phase'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:71:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1037392418__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.5ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:10:55 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQAyHwzIgs7GcABgMXUDvKDB72-dgJnwwWnBMvd6Y_aqA9nFJnhGebMNhWwZyTJ_AWWlPBKPf3JOVX1K51R4j-RiDXk5RxnmQ6eU4fv9uRsos-KbGHPJYYoGgt9D2geQwc1-TTN2P1X6aDH_mVHcXET3lvPiuUmKi8WWVNjvgd44GsP0rTi02N8KRaUKCiV0gZQseamE473IM4tn297r7f3vebtSWt8OE2LLeAtGif9Z0_gnwCKjjQRu0z6g9vuBCIHCrePbDJFLMh5hnugVXZEaYJHVYQkgqqQUL_MF8Ky10BMxBKDMSMld_tLtoH7HmAw&state=ac6254a6eceef8004080d1686611ca8024803176388891be" for 127.0.0.1 at 2015-01-20 15:10:55 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQAyHwzIgs7GcABgMXUDvKDB72-dgJnwwWnBMvd6Y_aqA9nFJnhGebMNhWwZyTJ_AWWlPBKPf3JOVX1K51R4j-RiDXk5RxnmQ6eU4fv9uRsos-KbGHPJYYoGgt9D2geQwc1-TTN2P1X6aDH_mVHcXET3lvPiuUmKi8WWVNjvgd44GsP0rTi02N8KRaUKCiV0gZQseamE473IM4tn297r7f3vebtSWt8OE2LLeAtGif9Z0_gnwCKjjQRu0z6g9vuBCIHCrePbDJFLMh5hnugVXZEaYJHVYQkgqqQUL_MF8Ky10BMxBKDMSMld_tLtoH7HmAw", "state"=>"ac6254a6eceef8004080d1686611ca8024803176388891be", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (["provider", "uid", "info", "credentials", "extra"]):
+  app/controllers/authentications_controller.rb:5:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.7ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:11:57 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQDms9Yh9bx3n7iielcwPSjlgeFTTM0RyTMGdqHJDx1GnWpxND6xYg2OQD1OGMQSH7xCfGjsNuTSajnXIAK16S8avCfXPWX4lTn4d4aTH9F2M8xGXrnChkvIcdhzEDEl7IKYdHBR5jZMX11OI0fMArF_eJvcus07LwIYb78QMiuC1xeuhupUn_wfm80NgRiS1mKxrML7ZqlsF8ImLZcRV6UqTf6-ZXYs6j2UCfYh8RwPFDur-qRoqXmDOGrFcg8tFGqZ96lrLsgKe7VfjmVF1Hjwk33CVT8hNMpH2kHpeyWJ6jVahxcazJ0uWaJ3U5NXfxg&state=2904a9a0b8dca050c063f29fe5d6d4c5f6682f5455654ae3" for 127.0.0.1 at 2015-01-20 15:11:58 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQDms9Yh9bx3n7iielcwPSjlgeFTTM0RyTMGdqHJDx1GnWpxND6xYg2OQD1OGMQSH7xCfGjsNuTSajnXIAK16S8avCfXPWX4lTn4d4aTH9F2M8xGXrnChkvIcdhzEDEl7IKYdHBR5jZMX11OI0fMArF_eJvcus07LwIYb78QMiuC1xeuhupUn_wfm80NgRiS1mKxrML7ZqlsF8ImLZcRV6UqTf6-ZXYs6j2UCfYh8RwPFDur-qRoqXmDOGrFcg8tFGqZ96lrLsgKe7VfjmVF1Hjwk33CVT8hNMpH2kHpeyWJ6jVahxcazJ0uWaJ3U5NXfxg", "state"=>"2904a9a0b8dca050c063f29fe5d6d4c5f6682f5455654ae3", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 2ms
+
+RuntimeError (#<OmniAuth::AuthHash::InfoHash email="y_ashu_rao@ymail.com" first_name="Ashwin" image="http://graph.facebook.com/10153007229409663/picture" last_name="Yaprala" name="Ashwin Yaprala" urls=#<OmniAuth::AuthHash Facebook="https://www.facebook.com/app_scoped_user_id/10153007229409663/"> verified=true>):
+  app/controllers/authentications_controller.rb:9:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:12:22 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQD8ixJYnasjAYOHqf_qNQWSAdiX0qoZ0r6tj_9Qx_BqwVOX9O__XmMT03R9lvKtPWP4pQNkARE8EooI5eXWvOQujxmj9OnUhBM9oq8TWRRQEQqwoUUEpHl2eFtjMzt69oO379Aad4qykcF-Ta1-ftXuz0i_mUB9ObQcTLLz4ZGcdrDUw2NVul49izgsv6neMV3XsbIo2rUCHyPSZPJQa2ssR6eNni7s8QcJUk6Wbb0r3NcVIoj4jFgk0roLhZYFCAJJJnRWxhTR8iKIt1h00Y-P7kRqWbERROc45TaLc5DnyWF3Km-24uE5IRQmezNp2xA&state=cf8173fb2a148b7b05c75c74f08c6c8fc32afc1472c5d8b4" for 127.0.0.1 at 2015-01-20 15:12:22 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQD8ixJYnasjAYOHqf_qNQWSAdiX0qoZ0r6tj_9Qx_BqwVOX9O__XmMT03R9lvKtPWP4pQNkARE8EooI5eXWvOQujxmj9OnUhBM9oq8TWRRQEQqwoUUEpHl2eFtjMzt69oO379Aad4qykcF-Ta1-ftXuz0i_mUB9ObQcTLLz4ZGcdrDUw2NVul49izgsv6neMV3XsbIo2rUCHyPSZPJQa2ssR6eNni7s8QcJUk6Wbb0r3NcVIoj4jFgk0roLhZYFCAJJJnRWxhTR8iKIt1h00Y-P7kRqWbERROc45TaLc5DnyWF3Km-24uE5IRQmezNp2xA", "state"=>"cf8173fb2a148b7b05c75c74f08c6c8fc32afc1472c5d8b4", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 2ms
+
+RuntimeError ("y_ashu_rao@ymail.com"):
+  app/controllers/authentications_controller.rb:9:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:17:32 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQBD4OsBiljSSOc6cE-L6pjtN3X-ZxkFxEONGuA5f1n-3RGy0N_TRBtNZBcHlot67rqswbsVOmTo-DN4LFu3W45RWMOiwutl-Qm46-g34wn-fVEMytsQzNXMjVEvF6Y0baYBFjNL900oQGX-OH2kDyamfXuCqb_-xrTSju6D7bgdnB_09hhmoRF6xVyePuairwFv7LRl7GLvQvi4bu10Xxm7vxV1kZPy9ED94hF8StiU2cFgre74rtXKjeB1JxHaaKk2muEJ6_p-zqOyYPgtmhDXuwTRXxk6c3lpOSGR-WHDr1bSvcLBysYe6cKy_g8DXKI&state=95210b32047e68f38eda5a1ea4d6fab8f75046cdd17ac67f" for 127.0.0.1 at 2015-01-20 15:17:32 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQBD4OsBiljSSOc6cE-L6pjtN3X-ZxkFxEONGuA5f1n-3RGy0N_TRBtNZBcHlot67rqswbsVOmTo-DN4LFu3W45RWMOiwutl-Qm46-g34wn-fVEMytsQzNXMjVEvF6Y0baYBFjNL900oQGX-OH2kDyamfXuCqb_-xrTSju6D7bgdnB_09hhmoRF6xVyePuairwFv7LRl7GLvQvi4bu10Xxm7vxV1kZPy9ED94hF8StiU2cFgre74rtXKjeB1JxHaaKk2muEJ6_p-zqOyYPgtmhDXuwTRXxk6c3lpOSGR-WHDr1bSvcLBysYe6cKy_g8DXKI", "state"=>"95210b32047e68f38eda5a1ea4d6fab8f75046cdd17ac67f", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError (#<OmniAuth::AuthHash credentials=#<OmniAuth::AuthHash expires=true expires_at=1426930424 token="CAAT6HWFZB4dsBAALt3Y6brL2uZCQKAZAuylXeBuWY2IrXvr8ZBvZC8PouPROaHlqdTxgebZATtQ1A0Oj2Ks4ThS6UVqm4L7U4kZCXgBRm5ne1ZAnxCUWVdrZBTSxxylwxMaYj57kC0ZAmeDUHgKAfUzDZAwNJZAZAnIZAkx9hLJdpnD4yp2JyZCMuSydhZABo8P8ZBonZAG2UZD"> extra=#<OmniAuth::AuthHash raw_info=#<OmniAuth::AuthHash birthday="06/27/1987" email="y_ashu_rao@ymail.com" first_name="Ashwin" gender="male" id="10153007229409663" last_name="Yaprala" link="https://www.facebook.com/app_scoped_user_id/10153007229409663/" locale="en_US" name="Ashwin Yaprala" timezone=5.5 updated_time="2014-12-14T12:04:27+0000" verified=true>> info=#<OmniAuth::AuthHash::InfoHash email="y_ashu_rao@ymail.com" first_name="Ashwin" image="http://graph.facebook.com/10153007229409663/picture" last_name="Yaprala" name="Ashwin Yaprala" urls=#<OmniAuth::AuthHash Facebook="https://www.facebook.com/app_scoped_user_id/10153007229409663/"> verified=true> provider="facebook" uid="10153007229409663">):
+  app/controllers/authentications_controller.rb:5:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:18:40 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQCtHYaV6OC7bLweM4xvYcXk7Ud830AoaqVVb4lOLKe3J_Lodjm3NHyLvxr_cJjfjwSA3FUNGFqQ2Z6wGLJaVMQzbLBXKx1KvG6bQWdm7ig_V6yk1aWkW3sIeuOvAxXkKC3ky0AbzX1MKi8Qdl-dxcTpFPluu-oL8kYgb_ao5aUr6h2-UVmb5H6VMljthXEqQEBq2KPdFaiyZkYjr8LA5mZWxBQ0kzS9q-TIbh_l8VHcnh04-xAfIGCCQqmCFMseDySvsbxpEopWStFc5rCsi-NEsZoyBuv7u_1t27En_vE42SZvEvOg8piwGVD5pVQgsUU&state=f7b1bca66f8be0acfde6f2e714f8efb94eb2aea0088966ab" for 127.0.0.1 at 2015-01-20 15:18:40 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQCtHYaV6OC7bLweM4xvYcXk7Ud830AoaqVVb4lOLKe3J_Lodjm3NHyLvxr_cJjfjwSA3FUNGFqQ2Z6wGLJaVMQzbLBXKx1KvG6bQWdm7ig_V6yk1aWkW3sIeuOvAxXkKC3ky0AbzX1MKi8Qdl-dxcTpFPluu-oL8kYgb_ao5aUr6h2-UVmb5H6VMljthXEqQEBq2KPdFaiyZkYjr8LA5mZWxBQ0kzS9q-TIbh_l8VHcnh04-xAfIGCCQqmCFMseDySvsbxpEopWStFc5rCsi-NEsZoyBuv7u_1t27En_vE42SZvEvOg8piwGVD5pVQgsUU", "state"=>"f7b1bca66f8be0acfde6f2e714f8efb94eb2aea0088966ab", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 1ms
+
+RuntimeError ("10153007229409663"):
+  app/controllers/authentications_controller.rb:5:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:23:57 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQBjVWOXq8Jlhz3o8fuaTBrcfz14hQSpcOAFGZHaDSuw_Ovl2ccXD11pgHWmErcJI453obBpWi_WZnf6DON-HMS-XO7rP8vz_8TECEcZ8IQE9n-vB_AqFTPNDiS45kTq_NCNe8tQxxJzgzuUPlCtDa43fDMqily5J-kLpkCclbWdgH6CvRyxwebAcuGFdzsJuva5QXX6aNm2onMb10lY3PsxDVMzxKJ7xDG9AebtiJh6BV7O4dfIHdowHfwfsDNzcP7lbTGmA6Gm0dAOFKgm1vzJEbDfU764Ct2vTiXxKiTKZA0krSO8IwRDKBKeX-Y-8GQ&state=363cf01ec00d0265f213fc3c3b2eebe5041a9135a556b4e9" for 127.0.0.1 at 2015-01-20 15:23:58 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQBjVWOXq8Jlhz3o8fuaTBrcfz14hQSpcOAFGZHaDSuw_Ovl2ccXD11pgHWmErcJI453obBpWi_WZnf6DON-HMS-XO7rP8vz_8TECEcZ8IQE9n-vB_AqFTPNDiS45kTq_NCNe8tQxxJzgzuUPlCtDa43fDMqily5J-kLpkCclbWdgH6CvRyxwebAcuGFdzsJuva5QXX6aNm2onMb10lY3PsxDVMzxKJ7xDG9AebtiJh6BV7O4dfIHdowHfwfsDNzcP7lbTGmA6Gm0dAOFKgm1vzJEbDfU764Ct2vTiXxKiTKZA0krSO8IwRDKBKeX-Y-8GQ", "state"=>"363cf01ec00d0265f213fc3c3b2eebe5041a9135a556b4e9", "provider"=>"facebook"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'y_ashu_rao@ymail.com' ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'y_ashu_rao@ymail.com' LIMIT 1
+  [1m[36m (13.2ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 123ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank):
+  app/controllers/authentications_controller.rb:17:in `block in create'
+  app/controllers/authentications_controller.rb:16:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `authentications`[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users`
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:26:36 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQCL3Jgr7rR5kg-nY5l_eLHlAB2TG0CoZISylptkA42qvfXxjrpa5CjDEjMNPdCJQ6Tzxt1ZT5YEn5ZImYUU79Kc3AocfCxi8XZHme91DJ1WGcN-YKluFskFvJlGIbOsvAwRB4WkjNT7pF8qgOGBVFYNlmYOcLxi9UB1NAYq0iP12ruwSPeEEg3xaBWyHP9vFDPG6ltB8rdWhsjh2iZiED5YgQmkCWvEzJkAF8hHSpp3LmAnuQK_ZOilsEInm9TVnT1uJUUvNGa3NX2YeDL9bWXEqhwFr_m69D4HbQO1lCP-kKbmb1mmT05mM54uyguTvZI&state=28599744f7524dfb6280b745981a4f0dfe8677ad3842192a" for 127.0.0.1 at 2015-01-20 15:26:36 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQCL3Jgr7rR5kg-nY5l_eLHlAB2TG0CoZISylptkA42qvfXxjrpa5CjDEjMNPdCJQ6Tzxt1ZT5YEn5ZImYUU79Kc3AocfCxi8XZHme91DJ1WGcN-YKluFskFvJlGIbOsvAwRB4WkjNT7pF8qgOGBVFYNlmYOcLxi9UB1NAYq0iP12ruwSPeEEg3xaBWyHP9vFDPG6ltB8rdWhsjh2iZiED5YgQmkCWvEzJkAF8hHSpp3LmAnuQK_ZOilsEInm9TVnT1uJUUvNGa3NX2YeDL9bWXEqhwFr_m69D4HbQO1lCP-kKbmb1mmT05mM54uyguTvZI", "state"=>"28599744f7524dfb6280b745981a4f0dfe8677ad3842192a", "provider"=>"facebook"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'y_ashu_rao@ymail.com' ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 160ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: confirm_password):
+  app/controllers/authentications_controller.rb:18:in `block in create'
+  app/controllers/authentications_controller.rb:16:in `create'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:27:41 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQDmVVF5uWehvz5-Z-frHMYsC68SIvTM7dPKPWPuYgarVRWqlFDgy4ZppoBQdF_L-AtDb5tOWR9ezVk0VrKm3QMTaZqsaDEWOkzwqxo-3VjgTOA3d7fyUkD2inKGTPIKmL9HD0IcPMECqAP7E-3Tj1It09qVjjObMWTaTL-hNvdg13A8nJ_mqdOW64FDUi979RDnBs6e0wZgqwJgpAFmhflbgZ7HVnyh_Bw4i5KiIsTEfVJ1EsLDDyTqhN3RX_mzNu_7fEXSZByuFNxMTSRNmf-to8lG-xqwGde2N76I4GI3rZVm5xl_nE1w4dULX_0Lu18&state=e40e92fb23039a682032402edc2a86f8119620eca3bb1d31" for 127.0.0.1 at 2015-01-20 15:27:41 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQDmVVF5uWehvz5-Z-frHMYsC68SIvTM7dPKPWPuYgarVRWqlFDgy4ZppoBQdF_L-AtDb5tOWR9ezVk0VrKm3QMTaZqsaDEWOkzwqxo-3VjgTOA3d7fyUkD2inKGTPIKmL9HD0IcPMECqAP7E-3Tj1It09qVjjObMWTaTL-hNvdg13A8nJ_mqdOW64FDUi979RDnBs6e0wZgqwJgpAFmhflbgZ7HVnyh_Bw4i5KiIsTEfVJ1EsLDDyTqhN3RX_mzNu_7fEXSZByuFNxMTSRNmf-to8lG-xqwGde2N76I4GI3rZVm5xl_nE1w4dULX_0Lu18", "state"=>"e40e92fb23039a682032402edc2a86f8119620eca3bb1d31", "provider"=>"facebook"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'y_ashu_rao@ymail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'y_ashu_rao@ymail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `users` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2015-01-20 09:57:42', 'y_ashu_rao@ymail.com', '$2a$10$QTcOACluFd2MFSuAngb0KuDZGbDAWHOYGZ1xsQPzsTncvd/yymg.q', '2015-01-20 09:57:42')
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `authentications` (`created_at`, `provider`, `uid`, `updated_at`, `user_id`) VALUES ('2015-01-20 09:57:42', 'facebook', '10153007229409663', '2015-01-20 09:57:42', 2)[0m
+  [1m[35m (87.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-01-20 09:57:43', `current_sign_in_at` = '2015-01-20 09:57:43', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2015-01-20 09:57:43' WHERE `users`.`id` = 2
+  [1m[36m (38.1ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 386ms
+
+ActionView::MissingTemplate (Missing template authentications/create, application/create with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/siri/ashwinblog/app/views"
+  * "/home/siri/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.4.1/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:403:in `_run__685349357__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:404:in `call_app!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:362:in `callback_phase'
+  omniauth-oauth2 (1.2.0) lib/omniauth/strategies/oauth2.rb:77:in `callback_phase'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:72:in `block in callback_phase'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:135:in `with_authorization_code!'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:71:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1037392418__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 15:28:03 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 281ms (Views: 279.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:04 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:28:05 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 15:28:05 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 66ms (Views: 11.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:28:07 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:28:08 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQDlt5kgW7Sbsvs2GTU4sGqNTNF7aMPOSLSbmDuEJzTTeBn5SpnWQ_9PnIs-j2_PYv68RXLAc4hL6msdx5ldYsfPyeVgaWl8LmqiYtYLmNIEzw_BUtwaxPjDivFy_dYjJJknm3LC4mjjzbJtPkqHXEmXL9E5LCnEPLoBfgA25Di9yAFvAjjaXSKnTs08crtwH8MCQQ4ztM1vVCUUitNlbwvYkQyXdvFXJTtMJkMB_XIZJiA7VwzSkpF0DLLsU1lB-vUextQfwOtdKP1tPnOKqHu7OMMri5WvuMbkKdvz7ibPosKhOnNJUrh-Vbb030vwA1o&state=62bc509d5f150a376c2f482dcc69fb2596943510520946ad" for 127.0.0.1 at 2015-01-20 15:28:08 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQDlt5kgW7Sbsvs2GTU4sGqNTNF7aMPOSLSbmDuEJzTTeBn5SpnWQ_9PnIs-j2_PYv68RXLAc4hL6msdx5ldYsfPyeVgaWl8LmqiYtYLmNIEzw_BUtwaxPjDivFy_dYjJJknm3LC4mjjzbJtPkqHXEmXL9E5LCnEPLoBfgA25Di9yAFvAjjaXSKnTs08crtwH8MCQQ4ztM1vVCUUitNlbwvYkQyXdvFXJTtMJkMB_XIZJiA7VwzSkpF0DLLsU1lB-vUextQfwOtdKP1tPnOKqHu7OMMri5WvuMbkKdvz7ibPosKhOnNJUrh-Vbb030vwA1o", "state"=>"62bc509d5f150a376c2f482dcc69fb2596943510520946ad", "provider"=>"facebook"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'y_ashu_rao@ymail.com' ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2015-01-20 09:58:09', `sign_in_count` = 2, `updated_at` = '2015-01-20 09:58:09' WHERE `users`.`id` = 2
+  [1m[36m (53.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:5000/welcome
+Completed 302 Found in 65ms (ActiveRecord: 53.8ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+Processing by HomeController#welcome as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/welcome.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:09 +0530
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `authentications`[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `users`
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UC1cBTsrOwQAWbgcCL4AapO2ks8IzIy1Iwuyn5izoWo="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:5000/
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:19 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:28:22 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 15:28:22 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:28:27 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:28:27 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQAijmf_K93_26UaQQKTlSBiULAIq1X0nNc0vNjN3NyMvaH9nouoQ51EXR0EmgXn3hrQ_Is1MDbY3wHkMKGfHy3g8UwFJCuv2UImnhHktMN3So41cHTTJ5389hjTuVJddecdIcrzxNT-0TIYvydB136s-Q_97JH4ISe9U-auIA3u6hrLbR2bFKCwKFkV3gqvdulql2d1Q6e8xHlGR2WW5Qzk1Q1KfFcv7zUUotR82ViNg-oIGa-JzwgyDO1REqRxPHu1M7pLIal02FYJu72y6cBlsJVBNWoPGZYsxvHSfbyce2NnGV3fFn6CunXnjbB3_es&state=ad04d325426e38bfd00b6a4dc398608fd75c508a2e8aa9ec" for 127.0.0.1 at 2015-01-20 15:28:27 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQAijmf_K93_26UaQQKTlSBiULAIq1X0nNc0vNjN3NyMvaH9nouoQ51EXR0EmgXn3hrQ_Is1MDbY3wHkMKGfHy3g8UwFJCuv2UImnhHktMN3So41cHTTJ5389hjTuVJddecdIcrzxNT-0TIYvydB136s-Q_97JH4ISe9U-auIA3u6hrLbR2bFKCwKFkV3gqvdulql2d1Q6e8xHlGR2WW5Qzk1Q1KfFcv7zUUotR82ViNg-oIGa-JzwgyDO1REqRxPHu1M7pLIal02FYJu72y6cBlsJVBNWoPGZYsxvHSfbyce2NnGV3fFn6CunXnjbB3_es", "state"=>"ad04d325426e38bfd00b6a4dc398608fd75c508a2e8aa9ec", "provider"=>"facebook"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'y_ashu_rao@ymail.com' ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-01-20 09:58:09', `current_sign_in_at` = '2015-01-20 09:58:29', `sign_in_count` = 3, `updated_at` = '2015-01-20 09:58:29' WHERE `users`.`id` = 2
+  [1m[36m (38.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:5000/welcome
+Completed 302 Found in 51ms (ActiveRecord: 39.9ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+Processing by HomeController#welcome as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/welcome.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:29 +0530
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0DQss7WjCluNkgR0imdugr/Gg9VmNH006StWjKN0b24="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:5000/
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:46 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:28:48 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 15:28:48 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:28:52 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:28:53 +0530
+
+
+Started GET "/auth/facebook/callback?code=AQDJhoGoTkxIdhargMQJRws-awWtG6jbkI46Aiuy0UNei2F1Ynilv38JRri-2LqA182chC07yzrFnOnL49zneVztN3vln74RhDUjl9dc0yYGeviONXAXpDbRrpL6iy4iXVrVRlOBtbQ3YUxDkx99Y0Un_eWACPqKFut0YA65kkh6k9nso_gQRGKC11_qlHOkU5JbnC4YCO3g6K9FlipCWuBfk-mKGWpZ_MLPluWS2QdZJ8iBtGDQOK51oC5b7kCulWnLsiFjrL29c_agJqcd3hR6tNimBSPeRKPOrAh_Is5p6sy8cBArhpY4ENJRDIOnuBU&state=0408d82dee98ec6f11e6ba37cbe435b930daf65099a3fafb" for 127.0.0.1 at 2015-01-20 15:28:53 +0530
+Processing by AuthenticationsController#create as HTML
+  Parameters: {"code"=>"AQDJhoGoTkxIdhargMQJRws-awWtG6jbkI46Aiuy0UNei2F1Ynilv38JRri-2LqA182chC07yzrFnOnL49zneVztN3vln74RhDUjl9dc0yYGeviONXAXpDbRrpL6iy4iXVrVRlOBtbQ3YUxDkx99Y0Un_eWACPqKFut0YA65kkh6k9nso_gQRGKC11_qlHOkU5JbnC4YCO3g6K9FlipCWuBfk-mKGWpZ_MLPluWS2QdZJ8iBtGDQOK51oC5b7kCulWnLsiFjrL29c_agJqcd3hR6tNimBSPeRKPOrAh_Is5p6sy8cBArhpY4ENJRDIOnuBU", "state"=>"0408d82dee98ec6f11e6ba37cbe435b930daf65099a3fafb", "provider"=>"facebook"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'y_ashu_rao@ymail.com' ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-01-20 09:58:29', `current_sign_in_at` = '2015-01-20 09:58:56', `sign_in_count` = 4, `updated_at` = '2015-01-20 09:58:56' WHERE `users`.`id` = 2
+  [1m[36m (57.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:5000/welcome
+Completed 302 Found in 70ms (ActiveRecord: 58.7ms)
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+Processing by HomeController#welcome as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered home/welcome.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:28:56 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+Processing by HomeController#welcome as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered home/welcome.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:30:15 +0530
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6yU2xuBBF2GJCS36ivRZ0sINm5X65isIJISvRPvqhJw="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:5000/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:31:20 +0530
+
+
+Started GET "/welcome" for 127.0.0.1 at 2015-01-20 15:34:22 +0530
+Processing by HomeController#welcome as HTML
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 15:34:22 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 110ms (Views: 11.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-20 15:34:39 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-20 15:34:59 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KoW7gRsTLcDYGPeG8AY/7cqii9gIPQ4q+IwyqVxEtO8=", "user"=>{"email"=>"siva.t@siriinnovations.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'siva.t@siriinnovations.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2015-01-20 10:04:59', 'siva.t@siriinnovations.com', '$2a$10$Nl1.JfT.WUx9Cz3aEXCNCek0gRcDI11QIxTD/ZVqCw.7NC0V8kPSm', '2015-01-20 10:04:59')[0m
+  [1m[35m (54.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2015-01-20 10:04:59', `current_sign_in_at` = '2015-01-20 10:04:59', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2015-01-20 10:04:59' WHERE `users`.`id` = 3
+  [1m[36m (43.6ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 224ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/application_controller.rb:6:in `after_sign_in_path_for'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 15:35:07 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:35:09 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 15:35:09 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/authentications.css?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/authentications.js?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-20 15:35:33 +0530
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mAuthentication Load (0.3ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`user_id` = 1
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 17:10:49 +0530
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-01-20 17:10:49 +0530
+
+
+Started GET "/auth/facebook/callback?error_code=4201&error_message=User+canceled+the+Dialog+flow&state=8bb7ca557a8c9f01ff5499eef0c38696a327ad310433e734" for 127.0.0.1 at 2015-01-20 17:11:25 +0530
+
+OmniAuth::Strategies::Facebook::NoAuthorizationCodeError (must pass either a `code` (via URL or by an `fbsr_XXX` signed request cookie)):
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:151:in `with_authorization_code!'
+  omniauth-facebook (2.0.0) lib/omniauth/strategies/facebook.rb:71:in `callback_phase'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:227:in `callback_call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1037392418__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/siri/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/siri/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.8ms)
